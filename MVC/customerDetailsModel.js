@@ -13,7 +13,7 @@ const customerDetailsSchema = new mongoose.Schema({
     match: [/^\S+@\S+\.\S+$/, "Please enter a valid email"],
   },
   phoneNumber: {
-    type: String, // keep as String to preserve leading 0s
+    type: Number, // keep as String to preserve leading 0s
     required: [true, "Phone number is required"],
     match: [/^\d{10}$/, "Phone number must be 10 digits"],
   },
